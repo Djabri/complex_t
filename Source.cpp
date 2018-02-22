@@ -80,20 +80,42 @@ int main()
 
 	complex_t a;
 	complex_t b;
+	char choice;
+
 	std::cout << "Enter a value:\n";
 
 	if (a.read(std::cin) && b.read(std::cin)) {
-		std::cout << "Add - ";
-		a.add(b).write(std::cout);
+
+		std::cout << "Select an arithmetic operation '+', '-', '*', '/' ";
+		std::cin >> choice;
+
+		switch (choice)
+		{
+		case ('+'):
+			std::cout << "Add - ";
+			a.add(b).write(std::cout);
+			break;
+
+		case ('-'):
+			std::cout << "Sub - ";
+			a.sub(b).write(std::cout);
+			break;
+
+		case ('*'):
+			std::cout << "Mul - ";
+			a.mul(b).write(std::cout);
+			break;
+
+		case ('/'):
+			std::cout << "Div - ";
+			a.div(b).write(std::cout);
+			break;
+		}
 	}
 	else
 	{
 		std::cout << "An error has occured while reading input data!";
 	}
-	
-
-
-	a.add(b).write(std::cout);
 
 	system("pause");
 	return 0;
