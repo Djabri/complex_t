@@ -78,16 +78,18 @@ complex_t complex_t::div(complex_t other) const
 int main()
 {
 
-	char str;
-	
 	complex_t a;
 	complex_t b;
-	std::cout << "Enter a value:\ncomplexOne - ";
-	a.read(std::cin);
+	std::cout << "Enter a value:\n";
 
-	std::cout << "complexTwo - ";
-	b.read(std::cin);
-
+	if (a.read(std::cin) && b.read(std::cin)) {
+		std::cout << "Add - ";
+		a.add(b).write(std::cout);
+	}
+	else
+	{
+		std::cout << "An error has occured while reading input data!";
+	}
 	
 
 
