@@ -13,7 +13,6 @@ struct complex_t
 	complex_t div(complex_t other) const;
 
 	std::istream& read(std::istream & stream) {
-		// (3, 4)
 		char op;
 
 		float aReal, aImag;
@@ -31,7 +30,6 @@ struct complex_t
 		return stream;
 	}
 	std::ostream& write(std::ostream& stream) {
-		// (3, 4)
 		stream << '(' << real << ", " << imag << ')';
 		return stream;
 	}
