@@ -80,11 +80,12 @@ int main()
 
 	char str;
 
-	complex_t a;
-	complex_t b;
-
+	std::cout << "Enter a value:\ncomplexOne - ";
 	a.read(std::cin);
+
+	std::cout << "complexTwo - ";
 	b.read(std::cin);
+
 
 	a.add(b).write(std::cout);
 
